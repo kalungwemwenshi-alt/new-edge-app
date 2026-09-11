@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Institutional Position Terminal | EdgeGrid Traders Capital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- App Shell Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pictures/logo.png" alt="EdgeGrid Traders Capital Logo">
+            </a>
+
+            <div class="nav-market-status hide-mobile">
+                <span class="pulse-dot"></span> Live Terminal
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="tools.html" class="active">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="VIPmembers.html" class="nav-vip-link"><i class='bx bxs-crown'></i> VIP Access</a></li>
+            </ul>
+
+            <div class="nav-right-actions">
+                <div id="themeToggle" class="theme-toggle" title="Toggle Theme">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="cta-contact">
+                    <a href="tel:+260973493949" class="btn btn-outline" style="padding: 9px 18px; font-size: 13px;">
+                        <i class='bx bxs-phone'></i> <span class="hide-mobile">+260 973 493 949</span>
+                    </a>
+                </div>
+                <a href="VIPmembers.html" class="vip-top-btn" title="VIP Access">
+                    <i class='bx bxs-crown'></i>
+                </a>
+                <button class="mobile-menu-trigger" aria-label="Open Navigation Menu">
+                    <i class='bx bx-menu-alt-right'></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="hero-badge" style="margin-bottom: 12px;">
+                <i class='bx bx-terminal'></i> Risk Architecture Engine
+            </div>
+            <h1>Position Size & Risk Calculator</h1>
+            <p>Calculate your mathematically exact lot sizing based on account equity, acceptable risk percentage, and structural stop-loss distance.</p>
+        </div>
+    </div>
+
+    <!-- Main Terminal Console -->
+    <section style="padding: 60px 0 90px 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="terminal-card">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: flex-start;">
+                    
+                    <!-- Left Column: Inputs -->
+                    <div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); display: flex; align-items: center; gap: 8px;">
+                                <i class='bx bx-slider-alt' style="color: var(--primary-color);"></i> Parameters
+                            </h3>
+                            <span style="font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">
+                                Institutional Presets
+                            </span>
+                        </div>
+
+                        <!-- Quick Account Presets -->
+                        <div style="margin-bottom: 22px;">
+                            <label style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 8px;">
+                                Quick Account Size Presets
+                            </label>
+                            <div class="preset-pills">
+                                <button type="button" class="preset-pill" onclick="setPresetBalance(1000)">$1,000</button>
+                                <button type="button" class="preset-pill" onclick="setPresetBalance(5000)">$5,000</button>
+                                <button type="button" class="preset-pill active" onclick="setPresetBalance(10000)">$10,000</button>
+                                <button type="button" class="preset-pill" onclick="setPresetBalance(50000)">$50,000</button>
+                                <button type="button" class="preset-pill" onclick="setPresetBalance(100000)">$100,000</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currencyPair">Instrument / Currency Pair</label>
+                            <select id="currencyPair">
+                                <option value="10">EUR/USD (Standard FX · $10.00 / Pip)</option>
+                                <option value="10">GBP/USD (Standard FX · $10.00 / Pip)</option>
+                                <option value="10">AUD/USD (Standard FX · $10.00 / Pip)</option>
+                                <option value="10">NZD/USD (Standard FX · $10.00 / Pip)</option>
+                                <option value="8.5">USD/JPY (Cross FX · ~$8.50 / Pip)</option>
+                                <option value="7.5">USD/CAD (Cross FX · ~$7.50 / Pip)</option>
+                                <option value="11">USD/CHF (Cross FX · ~$11.00 / Pip)</option>
+                                <option value="10">XAU/USD Gold (Spot · $10.00 / $1 Move)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accountBalance">Account Equity ($ USD)</label>
+                            <input type="number" id="accountBalance" placeholder="e.g. 10000" min="0" step="any" value="10000">
+                        </div>
+
+                        <div class="form-group">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <label for="riskPercentage" style="margin-bottom: 0;">Risk Per Trade (%)</label>
+                                <span id="riskPercentBadge" class="mono-nums" style="font-weight: 700; color: var(--primary-color); font-size: 13px;">1.0%</span>
+                            </div>
+                            <input type="number" id="riskPercentage" placeholder="e.g. 1" min="0.1" max="100" step="0.1" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stopLoss">Stop Loss Distance (Pips)</label>
+                            <input type="number" id="stopLoss" placeholder="e.g. 25" min="1" step="any" value="25">
+                        </div>
+
+                        <button class="btn btn-primary btn-glow" id="calculateBtn" style="width: 100%; font-size: 16px; margin-top: 10px;">
+                            <i class='bx bx-calculator'></i> Calculate Lot Size
+                        </button>
+                        <p style="color: var(--accent-rose); font-size: 13px; margin-top: 10px; display: none;" id="errorMsg">
+                            Please enter valid positive numbers for all parameters.
+                        </p>
+                    </div>
+
+                    <!-- Right Column: Results Output -->
+                    <div>
+                        <div class="calc-results-box">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                                <h3 style="font-size: 18px; font-weight: 800; color: var(--secondary-color); display: flex; align-items: center; gap: 8px;">
+                                    <i class='bx bx-check-shield' style="color: var(--primary-color);"></i> Output Execution
+                                </h3>
+                                <span id="riskSafetyBadge" style="font-size: 11px; font-weight: 800; background: rgba(0, 186, 102, 0.15); color: #00BA66; padding: 3px 10px; border-radius: var(--radius-pill);">
+                                    PRO RECOMMENDED
+                                </span>
+                            </div>
+
+                            <!-- Standard Lots Highlight -->
+                            <div style="background: var(--card-bg); border: 1.5px solid var(--primary-color); padding: 22px; border-radius: var(--radius-lg); margin-bottom: 20px; text-align: center; box-shadow: var(--shadow-sm);">
+                                <div style="font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+                                    Recommended Standard Lots
+                                </div>
+                                <div id="standardLots" class="mono-nums" style="font-size: 42px; font-weight: 800; color: var(--primary-color); line-height: 1;">
+                                    0.40
+                                </div>
+                                <div style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">
+                                    Contract size: 100,000 units
+                                </div>
+                            </div>
+
+                            <!-- Detailed Result Items -->
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Total Cash at Risk (USD)</span>
+                                <span id="moneyRisk" class="calc-result-val highlight mono-nums">$100.00</span>
+                            </div>
+
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Approx. Risk in Kwacha (ZMW)</span>
+                                <span id="kwachaRisk" class="calc-result-val mono-nums" style="color: var(--text-main); font-size: 17px;">~K2,700 ZMW</span>
+                            </div>
+
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Mini Lots (10,000 units)</span>
+                                <span id="miniLots" class="calc-result-val mono-nums">4.00</span>
+                            </div>
+
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Micro Lots (1,000 units)</span>
+                                <span id="microLots" class="calc-result-val mono-nums">40.00</span>
+                            </div>
+
+                            <div style="margin-top: 24px; padding: 14px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 12px; color: var(--text-light); line-height: 1.5;">
+                                <i class='bx bx-info-circle' style="color: var(--primary-color); margin-right: 4px;"></i>
+                                <b>Institutional Rule:</b> Never risk more than 1% to 2% of total capital on a single setup. If your stop loss distance widens, lot sizing must dynamically shrink to preserve your edge.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="pictures/logo.png" alt="EdgeGrid Traders Logo" style="height: 60px; margin-bottom: 18px;">
+                    <p style="font-size: 14px; line-height: 1.6; color: var(--text-light); margin-bottom: 20px;">
+                        Headquartered in Livingstone, Zambia. Dedicated to forging profitable institutional market participants through transparent education, risk algorithms, and our signature 'Learn Now, Pay Later' initiative.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Trading Courses</a></li>
+                        <li><a href="tools.html">Position Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Market Insights</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="VIPmembers.html">VIP Inner Circle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Desk</h4>
+                    <ul>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-map'></i> Livingstone, Zambia</span></li>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-phone'></i> +260 973 493 949</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> EdgeGrid Traders Capital. All rights reserved. | Livingstone Floor, Zambia
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Slide-Out App Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="mobile-app-drawer">
+        <div class="drawer-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="pictures/logo.png" alt="EdgeGrid Logo" style="height: 36px;">
+            </div>
+            <div class="drawer-close"><i class='bx bx-x'></i></div>
+        </div>
+        <div style="padding: 16px 20px 0 20px;">
+            <div style="background: var(--bg-gray); padding: 12px 14px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--border-color);">
+                <div>
+                    <div style="font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">Trading Floor</div>
+                    <div style="font-size: 13px; font-weight: 800; color: var(--secondary-color);">Livingstone HQ • Pro</div>
+                </div>
+                <span class="nav-market-status" style="font-size: 10px; padding: 2px 8px;"><span class="pulse-dot"></span> Live</span>
+            </div>
+        </div>
+        <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-home-alt-2'></i> <span>Home</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="courses.html#free-beginner-class" class="drawer-item" style="background: var(--primary-light); border: 1px solid var(--border-glow); border-radius: 12px; margin: 4px 0;">
+                <div class="drawer-item-left"><i class='bx bxs-gift' style="color: var(--primary-color);"></i> <span style="color: var(--primary-color); font-weight: 700;">Free Beginner Class</span></div>
+                <span style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 8px; border-radius: 9999px;">FREE (3 Modules)</span>
+            </a>
+            <a href="courses.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-graduation'></i> <span>Courses & Programs</span></div>
+                <span style="font-size: 10px; font-weight: 800; background: var(--primary-light); color: var(--primary-color); padding: 2px 6px; border-radius: 9999px;">3 Active</span>
+            </a>
+            <a href="tools.html" class="drawer-item active">
+                <div class="drawer-item-left"><i class='bx bxs-calculator'></i> <span>Position Calculator</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="VIPmembers.html" class="drawer-item" style="color: var(--primary-color); font-weight: 700;">
+                <div class="drawer-item-left"><i class='bx bxs-crown'></i> <span>VIP Inner Circle</span></div>
+                <span style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 6px; border-radius: 9999px;">PRO</span>
+            </a>
+            <a href="about.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-info-circle'></i> <span>About Us</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="blog.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-news'></i> <span>Market Blog</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="faq.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-help-circle'></i> <span>FAQ</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="contact.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-envelope'></i> <span>Contact Desk</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+        </div>
+        <div class="drawer-footer">
+            <button onclick="openEnrollModal(); closeMobileDrawer();" class="btn btn-primary" style="width: 100%; margin-bottom: 12px; font-size: 14px;">
+                <i class='bx bx-edit'></i> Enroll Today
+            </button>
+            <a href="tel:+260973493949" class="btn btn-outline" style="width: 100%; font-size: 14px; display: flex;">
+                <i class='bx bxs-phone'></i> Call Trading Desk
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation (Native App Feel) -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html">
+            <i class='bx bxs-home-alt-2'></i>
+            <span>Home</span>
+        </a>
+        <a href="courses.html">
+            <i class='bx bxs-graduation'></i>
+            <span>Courses</span>
+        </a>
+        <a href="tools.html" class="active">
+            <i class='bx bxs-calculator'></i>
+            <span>Tools</span>
+        </a>
+        <a href="VIPmembers.html" class="vip-nav-tab">
+            <i class='bx bxs-crown'></i>
+            <span>VIP</span>
+        </a>
+        <a href="contact.html">
+            <i class='bx bxs-chat'></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- WhatsApp Floating Concierge -->
+    <div class="whatsapp-container">
+        <div id="waPopup" class="wa-popup">
+            <div class="wa-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class='bx bxl-whatsapp' style="font-size: 22px;"></i>
+                    <h4 style="margin: 0; font-size: 14px;">EdgeGrid Concierge</h4>
+                </div>
+                <i class='bx bx-x' style="font-size: 20px; cursor: pointer;" onclick="toggleWAPopup()"></i>
+            </div>
+            <div class="wa-body">
+                <div class="wa-message-received">
+                    Welcome to EdgeGrid Traders Capital. How may our floor analysts assist your trading journey today?
+                </div>
+            </div>
+            <div class="wa-footer">
+                <input type="text" id="waMessageInput" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') sendWAMessage()">
+                <button onclick="sendWAMessage()" aria-label="Send WhatsApp message"><i class='bx bxs-send'></i></button>
+            </div>
+        </div>
+        <div class="whatsapp-float" onclick="toggleWAPopup()" title="Chat on WhatsApp">
+            <div class="wa-waves"></div>
+            <i class='bx bxl-whatsapp'></i>
+        </div>
+    </div>
+
+    <!-- Enrollment Bottom Sheet Modal -->
+    <div id="enrollModal" class="enroll-modal">
+        <div class="enroll-modal-content">
+            <div class="enroll-modal-header">
+                <h3>Start Your Trading Journey</h3>
+                <i class='bx bx-x' onclick="closeEnrollModal()"></i>
+            </div>
+            <div class="enroll-modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="enrolName" placeholder="e.g. Kalungwe Mwenshi">
+                </div>
+                <div class="form-group">
+                    <label>Country / City</label>
+                    <input type="text" id="enrolCountry" placeholder="e.g. Zambia, Livingstone">
+                </div>
+                <div class="form-group">
+                    <label>Trading Experience</label>
+                    <select id="enrolExperience">
+                        <option value="Complete Beginner">Complete Beginner</option>
+                        <option value="Less than 1 year">Less than 1 year</option>
+                        <option value="1-3 years">1-3 years</option>
+                        <option value="3+ years (Funded Seeker)">3+ years (Funded Seeker)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Learning Track</label>
+                    <select id="enrolFunds">
+                        <option value="Learn Now, Pay Later Program">Learn Now, Pay Later Program</option>
+                        <option value="Elite 30-Day Training ($75)">Elite 30-Day Training ($75)</option>
+                        <option value="Extra Earners ($179)">Extra Earners ($179)</option>
+                        <option value="VIP CAP Mastery ($349)">VIP CAP Mastery ($349)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="submitEnrollment()">
+                    Submit Application <i class='bx bx-paper-plane'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+    <script>
+        function setPresetBalance(amount) {
+            document.getElementById('accountBalance').value = amount;
+            document.querySelectorAll('.preset-pill').forEach(btn => {
+                if (btn.textContent.includes(amount.toLocaleString())) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            // Auto trigger calculation
+            if (typeof triggerCalculation === 'function') {
+                triggerCalculation();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>EdgeGrid Traders Capital | Institutional Trading & Education</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- App Shell Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pictures/logo.png" alt="EdgeGrid Traders Capital Logo">
+            </a>
+
+            <div class="nav-market-status hide-mobile">
+                <span class="pulse-dot"></span> Live Markets Open
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="VIPmembers.html" class="nav-vip-link"><i class='bx bxs-crown'></i> VIP Access</a></li>
+            </ul>
+
+            <div class="nav-right-actions">
+                <div id="themeToggle" class="theme-toggle" title="Toggle Theme">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="cta-contact">
+                    <a href="tel:+260973493949" class="btn btn-outline" style="padding: 9px 18px; font-size: 13px;">
+                        <i class='bx bxs-phone'></i> <span class="hide-mobile">+260 973 493 949</span>
+                    </a>
+                </div>
+                <a href="VIPmembers.html" class="vip-top-btn" title="VIP Inner Circle">
+                    <i class='bx bxs-crown'></i>
+                </a>
+                <button class="mobile-menu-trigger" aria-label="Open Navigation Menu">
+                    <i class='bx bx-menu-alt-right'></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Wall Street Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item"><span class="ticker__symbol">EUR/USD</span><span
+                    class="ticker__price mono-nums">1.0854</span><span class="ticker__change positive"><i
+                        class='bx bx-up-arrow-alt'></i> 0.14%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">GBP/USD</span><span
+                    class="ticker__price mono-nums">1.2642</span><span class="ticker__change negative"><i
+                        class='bx bx-down-arrow-alt'></i> 0.06%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">USD/JPY</span><span
+                    class="ticker__price mono-nums">150.28</span><span class="ticker__change positive"><i
+                        class='bx bx-up-arrow-alt'></i> 0.38%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">XAU/USD</span><span
+                    class="ticker__price mono-nums">2038.20</span><span class="ticker__change positive"><i
+                        class='bx bx-up-arrow-alt'></i> 1.24%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">BTC/USD</span><span
+                    class="ticker__price mono-nums">64,450</span><span class="ticker__change positive"><i
+                        class='bx bx-up-arrow-alt'></i> 2.85%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">US30</span><span
+                    class="ticker__price mono-nums">39,120</span><span class="ticker__change negative"><i
+                        class='bx bx-down-arrow-alt'></i> 0.25%</span></div>
+            <div class="ticker__item"><span class="ticker__symbol">NAS100</span><span
+                    class="ticker__price mono-nums">18,240</span><span class="ticker__change positive"><i
+                        class='bx bx-up-arrow-alt'></i> 0.82%</span></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-elements">
+            <div class="glow-orb gold"></div>
+            <div class="glow-orb dark"></div>
+        </div>
+        <div class="container relative-z">
+            <div class="hero-badge fade-up">
+                <span class="pulse-dot"></span> Zambia's #1 Institutional Grade Trading Floor
+            </div>
+            <h1 class="fade-up delay-1">Engineered for<br><span>Market Mastery & Wealth</span></h1>
+            <p class="fade-up delay-2">Trade the global currency and indices markets with true algorithmic precision.
+                Gain direct access to Zambia's premier institutional mentors, Smart Money Concepts (SMC), and our
+                signature <b>'Learn Now, Trade Now'</b> funded pathway.</p>
+            <div class="btn-group fade-up delay-3">
+                <a href="#" onclick="openEnrollModal(); return false;" class="btn btn-primary btn-glow">
+                    <i class='bx bx-shield-quarter'></i> Apply For Mentorship
+                </a>
+                <a href="courses.html" class="btn btn-outline btn-glass">
+                    <i class='bx bx-grid-alt'></i> Explore Programs
+                </a>
+            </div>
+
+            <!-- Bento-Grid Stats Dashboard (App Feel) -->
+            <div class="dashboard-stats fade-up delay-4">
+                <!-- Stat Widget 1 -->
+                <div class="stat-widget">
+                    <div class="stat-header">
+                        <div class="stat-icon"><i class='bx bx-wallet'></i></div>
+                        <div class="stat-trend"><i class='bx bx-trending-up'></i> +14.2% MoM</div>
+                    </div>
+                    <h3 class="mono-nums">K500,000+</h3>
+                    <p>Verified Client Profits Booked</p>
+                    <!-- Mini Sparkline SVG -->
+                    <div style="margin-top: 14px; height: 32px;">
+                        <svg viewBox="0 0 200 40" style="width: 100%; height: 100%; overflow: visible;">
+                            <path d="M 0 35 Q 30 30 50 25 T 100 20 T 150 10 T 200 5" fill="none" stroke="#168A3A"
+                                stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M 0 35 Q 30 30 50 25 T 100 20 T 150 10 T 200 5 L 200 40 L 0 40 Z"
+                                fill="url(#sparkGrad1)" opacity="0.25" />
+                            <defs>
+                                <linearGradient id="sparkGrad1" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#168A3A" />
+                                    <stop offset="100%" stop-color="#168A3A" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Stat Widget 2 -->
+                <div class="stat-widget">
+                    <div class="stat-header">
+                        <div class="stat-icon"><i class='bx bx-radar'></i></div>
+                        <div class="stat-trend" style="color: var(--primary-color);"><span class="pulse-dot"></span>
+                            Live Community</div>
+                    </div>
+                    <h3 class="mono-nums">850+</h3>
+                    <p>Active Global Traders & Alumni</p>
+                    <div style="margin-top: 14px; height: 32px;">
+                        <svg viewBox="0 0 200 40" style="width: 100%; height: 100%; overflow: visible;">
+                            <path d="M 0 32 Q 40 28 80 18 T 130 15 T 200 4" fill="none" stroke="#00BA66"
+                                stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M 0 32 Q 40 28 80 18 T 130 15 T 200 4 L 200 40 L 0 40 Z" fill="url(#sparkGrad2)"
+                                opacity="0.25" />
+                            <defs>
+                                <linearGradient id="sparkGrad2" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#00BA66" />
+                                    <stop offset="100%" stop-color="#00BA66" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Stat Widget 3 -->
+                <div class="stat-widget">
+                    <div class="stat-header">
+                        <div class="stat-icon"><i class='bx bx-target-lock'></i></div>
+                        <div class="stat-trend"><i class='bx bx-check-shield'></i> 1:3.5 Avg RR</div>
+                    </div>
+                    <h3 class="mono-nums">69.4%</h3>
+                    <p>Algorithmic Model Win Rate</p>
+                    <div style="margin-top: 14px; height: 32px;">
+                        <svg viewBox="0 0 200 40" style="width: 100%; height: 100%; overflow: visible;">
+                            <path d="M 0 30 Q 30 15 70 22 T 120 12 T 200 6" fill="none" stroke="#168A3A"
+                                stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M 0 30 Q 30 15 70 22 T 120 12 T 200 6 L 200 40 L 0 40 Z" fill="url(#sparkGrad1)"
+                                opacity="0.25" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brokers & Ecosystem Strip -->
+    <section
+        style="padding: 50px 0; background: var(--bg-main); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container" style="text-align: center;">
+            <div
+                style="font-size: 12px; font-weight: 800; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 24px;">
+                Supported Institutional Brokers & Liquidity Gateways
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap;">
+                <div
+                    style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text-main); background: var(--card-bg); padding: 10px 20px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <i class='bx bx-chart' style="font-size: 22px; color: var(--primary-color);"></i> Exness Pro
+                </div>
+                <div
+                    style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text-main); background: var(--card-bg); padding: 10px 20px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <i class='bx bx-cube-alt' style="font-size: 22px; color: var(--primary-color);"></i> Holla Prime
+                </div>
+                <div
+                    style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text-main); background: var(--card-bg); padding: 10px 20px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <i class='bx bx-globe' style="font-size: 22px; color: var(--primary-color);"></i> FundedNext
+                </div>
+                <div
+                    style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text-main); background: var(--card-bg); padding: 10px 20px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <i class='bx bxl-mastercard' style="font-size: 22px; color: var(--primary-color);"></i> GoatFunded
+                    Trader
+                </div>
+                <div
+                    style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text-main); background: var(--card-bg); padding: 10px 20px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                    <i class='bx bx-shield-quarter' style="font-size: 22px; color: var(--primary-color);"></i>
+                    SecureFund Prop
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section style="padding: 85px 0; background: var(--bg-main);">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+            <div>
+                <div class="hero-badge" style="margin-bottom: 16px;">
+                    <i class='bx bx-badge-check'></i> Institutional Edge
+                </div>
+                <h2
+                    style="font-size: 36px; font-weight: 800; color: var(--secondary-color); margin-bottom: 20px; letter-spacing: -0.03em; line-height: 1.2;">
+                    Why Trade with <span style="color: var(--primary-color);">EdgeGrid</span>?
+                </h2>
+                <p style="color: var(--text-light); margin-bottom: 16px; font-size: 16px;">
+                    The global FX market moves over <b>$7.5 Trillion</b> daily. 90% of retail traders lose because they
+                    trade retail trendlines and lagging indicators that institutional algorithms intentionally hunt.
+                </p>
+                <p style="color: var(--text-light); margin-bottom: 24px; font-size: 16px;">
+                    At EdgeGrid Traders Capital in Zambia and online globally, we eliminate the guru noise. We
+                    teach you pure institutional order flow, liquidity sweeps, and IPDA algorithmic delivery — enabling
+                    you to trade with the central banks rather than becoming their liquidity.
+                </p>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                    <a href="#" onclick="openEnrollModal(); return false;" class="btn btn-primary">
+                        <i class='bx bx-user-plus'></i> Enroll Today
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        Read Our Story
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card: Learn Now Pay Later -->
+            <div class="card featured" style="padding: 36px 32px;">
+                <div class="card-badge-top">Exclusive Model</div>
+                <div class="card-icon"><i class='bx bx-rocket'></i></div>
+                <h3 style="font-size: 24px;">A Structured Path to Trading Mastery</h3>
+                <p style="margin-bottom: 24px;">
+                    We provide a structured institutional framework designed to take you from foundational knowledge to
+                    confident, disciplined execution. Build real trading skills through practical education, proven
+                    methodologies and guided market experience.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 26px;">
+                    <div style="display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14px;">
+                        <i class='bx bx-check-circle' style="color: var(--primary-color); font-size: 20px;"></i>
+                        <span>Live Trading Desk Execution from Day 1</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14px;">
+                        <i class='bx bx-check-circle' style="color: var(--primary-color); font-size: 20px;"></i>
+                        <span>Direct Institutional Mentorship & Daily Trade Reviews</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14px;">
+                        <i class='bx bx-check-circle' style="color: var(--primary-color); font-size: 20px;"></i>
+                        <span>Full Prop Account Training (up to $200k)</span>
+                    </div>
+                </div>
+                <a href="#" onclick="openEnrollModal('Learn Now Pay Later'); return false;" class="btn btn-primary"
+                    style="width: 100%;">
+                    Check Eligibility <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Trading Programs Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Trading Programs</h2>
+                <p>Curated curriculums engineered for complete beginners, intermediate traders, and institutional
+                    snipers.</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <div class="card">
+                    <div class="card-badge-top">Foundational</div>
+                    <div class="card-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h3>Elite Program</h3>
+                    <p>The foundational blueprint covering market mechanics, candlestick dynamics, risk architecture,
+                        and disciplined trade execution.</p>
+                    <div class="course-price">$75 · 30 Days Intense</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 16 Modules</span>
+                        <span><i class='bx bxs-star' style="color: #F59E0B;"></i> 4.8 / 5.0</span>
+                    </div>
+                    <div style="font-size: 13px; color: var(--text-light); margin-bottom: 20px;">
+                        <i class='bx bx-group'></i> 1,500+ Active Students
+                    </div>
+                    <a href="#" onclick="openEnrollModal('Elite Program'); return false;" class="btn btn-outline"
+                        style="width: 100%;">
+                        Enroll in Elite
+                    </a>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="card">
+                    <div class="card-badge-top">Flexible</div>
+                    <div class="card-icon"><i class='bx bx-line-chart'></i></div>
+                    <h3>Extra Earners Program</h3>
+                    <p>Built for professionals and part-time traders looking to generate reliable secondary cash flow
+                        without staring at charts all day.</p>
+                    <div class="course-price">$179 · Includes Signals</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 12 Modules</span>
+                        <span><i class='bx bxs-star' style="color: #F59E0B;"></i> 4.9 / 5.0</span>
+                    </div>
+                    <div style="font-size: 13px; color: var(--text-light); margin-bottom: 20px;">
+                        <i class='bx bx-group'></i> 2,800+ Active Students
+                    </div>
+                    <a href="#" onclick="openEnrollModal('Extra Earners'); return false;" class="btn btn-outline"
+                        style="width: 100%;">
+                        Enroll in Extra Earners
+                    </a>
+                </div>
+
+                <!-- Course 3 (VIP Flagship) -->
+                <div class="card featured">
+                    <div class="card-badge-top" style="background: var(--primary-color); color: #fff;">VIP Inner Circle
+                    </div>
+                    <div class="card-icon"><i class='bx bxs-crown'></i></div>
+                    <h3>CAP Mastery Terminal</h3>
+                    <p>Our flagship institutional program. Master IPDA algorithms, Fair Value Gaps, liquidity sweeps,
+                        order blocks, and 1-on-1 mentorship.</p>
+                    <div class="course-price">$349 · 6 Weeks VIP</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 7 Master Modules</span>
+                        <span><i class='bx bxs-star' style="color: #00BA66;"></i> 5.0 / 5.0</span>
+                    </div>
+                    <div style="font-size: 13px; color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">
+                        <i class='bx bx-check-double'></i> Includes Interactive Notes & Signals
+                    </div>
+                    <a href="VIPmembers.html" class="btn btn-primary btn-glow" style="width: 100%;">
+                        Enter VIP Portal <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Teaser -->
+    <section style="padding: 85px 0; background: var(--bg-main);">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <div class="hero-badge" style="margin-bottom: 16px;">
+                <i class='bx bx-calculator'></i> Proprietary Utility
+            </div>
+            <h2
+                style="font-size: 34px; font-weight: 800; color: var(--secondary-color); margin-bottom: 16px; letter-spacing: -0.03em;">
+                Protect Your Capital with Mathematical Precision
+            </h2>
+            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 34px;">
+                Institutional survival hinges on position sizing. Never guess your lots again. Use our live terminal
+                calculator to compute your exact position size based on balance, risk percentage, and pip distance.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                <a href="tools.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px;">
+                    <i class='bx bx-slider-alt'></i> Launch Position Calculator
+                </a>
+                <a href="VIPmembers.html" class="btn btn-outline" style="padding: 16px 28px; font-size: 16px;">
+                    <i class='bx bxs-crown'></i> View SMC Strategy
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Trading Desk Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Floor Experts</h2>
+                <p>The strategic minds and seasoned fund mentors behind EdgeGrid Traders Capital in Livingstone, Zambia.
+                </p>
+            </div>
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="pictures/me.jpeg" alt="Kalungwe Mwenshi">
+                    </div>
+                    <div class="team-info">
+                        <h3>Kalungwe Mwenshi <i class='bx bxs-badge-check'
+                                style='color: #1DA1F2; font-size: 20px; margin-left: 6px;'
+                                title="Verified Desk Expert"></i></h3>
+                        <p class="designation">Portfolio Manager (PM)</p>
+                        <div class="expertise-tags">
+                            <span>Asset Allocation</span>
+                            <span>Macro Flow</span>
+                            <span>Quant Modeling</span>
+                            <span>Fund Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="pictures/tim.jpeg" alt="Timothy Kambole">
+                    </div>
+                    <div class="team-info">
+                        <h3>Timothy Kambole <i class='bx bxs-badge-check'
+                                style='color: #1DA1F2; font-size: 20px; margin-left: 6px;'
+                                title="Verified Desk Expert"></i></h3>
+                        <p class="designation">Head Mentor (HM)</p>
+                        <div class="expertise-tags">
+                            <span>Price Action</span>
+                            <span>Psychology</span>
+                            <span>Mentorship</span>
+                            <span>Market Context</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="pictures/de.jpeg" alt="Dephius Chinyama">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dephius Chinyama <i class='bx bxs-badge-check'
+                                style='color: #1DA1F2; font-size: 20px; margin-left: 6px;'
+                                title="Verified Desk Expert"></i></h3>
+                        <p class="designation">Senior Trade Analyst</p>
+                        <div class="expertise-tags">
+                            <span>Liquidity</span>
+                            <span>Order Flow</span>
+                            <span>Data Analytics</span>
+                            <span>Market Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="pictures/nu.png" alt="Boyd Mbanga">
+                    </div>
+                    <div class="team-info">
+                        <h3>Boyd Mbanga <i class='bx bxs-badge-check'
+                                style='color: #1DA1F2; font-size: 20px; margin-left: 6px;'
+                                title="Verified Desk Expert"></i></h3>
+                        <p class="designation">Chief Risk Officer (CRO)</p>
+                        <div class="expertise-tags">
+                            <span>Risk Mitigation</span>
+                            <span>Compliance</span>
+                            <span>Trade Safety</span>
+                            <span>Capital Defense</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="pictures/logo.png" alt="EdgeGrid Traders Logo" style="height: 60px; margin-bottom: 18px;">
+                    <p style="font-size: 14px; line-height: 1.6; color: var(--text-light); margin-bottom: 20px;">
+                        Headquartered in Livingstone, Zambia. Dedicated to forging profitable institutional market
+                        participants through transparent education, risk algorithms, and our signature 'Learn Now, Pay
+                        Later' initiative.
+                    </p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="#"
+                            style="background: var(--primary-light); color: var(--primary-color); display: flex; width: 38px; height: 38px; border-radius: 50%; align-items: center; justify-content: center; font-size: 18px; border: 1px solid var(--border-color);"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#"
+                            style="background: var(--primary-light); color: var(--primary-color); display: flex; width: 38px; height: 38px; border-radius: 50%; align-items: center; justify-content: center; font-size: 18px; border: 1px solid var(--border-color);"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="#"
+                            style="background: var(--primary-light); color: var(--primary-color); display: flex; width: 38px; height: 38px; border-radius: 50%; align-items: center; justify-content: center; font-size: 18px; border: 1px solid var(--border-color);"><i
+                                class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Trading Courses</a></li>
+                        <li><a href="tools.html">Position Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Market Insights</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="VIPmembers.html">VIP Inner Circle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Desk</h4>
+                    <ul>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-map'></i>
+                                Livingstone, Zambia</span></li>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-phone'></i> +260
+                                973 493 949</span></li>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-time'></i>
+                                Mon–Fri: 08:00 – 17:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> EdgeGrid Traders Capital. All rights reserved. | Livingstone Floor,
+                Zambia
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Slide-Out App Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="mobile-app-drawer">
+        <div class="drawer-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="pictures/logo.png" alt="EdgeGrid Logo" style="height: 36px;">
+            </div>
+            <div class="drawer-close"><i class='bx bx-x'></i></div>
+        </div>
+        <div style="padding: 16px 20px 0 20px;">
+            <div
+                style="background: var(--bg-gray); padding: 12px 14px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--border-color);">
+                <div>
+                    <div
+                        style="font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">
+                        Trading Floor</div>
+                    <div style="font-size: 13px; font-weight: 800; color: var(--secondary-color);">Livingstone HQ • Pro
+                    </div>
+                </div>
+                <span class="nav-market-status" style="font-size: 10px; padding: 2px 8px;"><span
+                        class="pulse-dot"></span> Live</span>
+            </div>
+        </div>
+        <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-item active">
+                <div class="drawer-item-left"><i class='bx bxs-home-alt-2'></i> <span>Home</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="courses.html#free-beginner-class" class="drawer-item"
+                style="background: var(--primary-light); border: 1px solid var(--border-glow); border-radius: 12px; margin: 4px 0;">
+                <div class="drawer-item-left"><i class='bx bxs-gift' style="color: var(--primary-color);"></i> <span
+                        style="color: var(--primary-color); font-weight: 700;">Free Beginner Class</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 8px; border-radius: 9999px;">FREE
+                    (3 Modules)</span>
+            </a>
+            <a href="courses.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-graduation'></i> <span>Courses & Programs</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-light); color: var(--primary-color); padding: 2px 6px; border-radius: 9999px;">3
+                    Active</span>
+            </a>
+            <a href="tools.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-calculator'></i> <span>Position Calculator</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="VIPmembers.html" class="drawer-item" style="color: var(--primary-color); font-weight: 700;">
+                <div class="drawer-item-left"><i class='bx bxs-crown'></i> <span>VIP Inner Circle</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 6px; border-radius: 9999px;">PRO</span>
+            </a>
+            <a href="about.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-info-circle'></i> <span>About Us</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="blog.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-news'></i> <span>Market Blog</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="faq.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-help-circle'></i> <span>FAQ</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="contact.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-envelope'></i> <span>Contact Desk</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+        </div>
+        <div class="drawer-footer">
+            <button onclick="openEnrollModal(); closeMobileDrawer();" class="btn btn-primary"
+                style="width: 100%; margin-bottom: 12px; font-size: 14px;">
+                <i class='bx bx-edit'></i> Enroll Today
+            </button>
+            <a href="tel:+260973493949" class="btn btn-outline" style="width: 100%; font-size: 14px; display: flex;">
+                <i class='bx bxs-phone'></i> Call Trading Desk
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation (Native App Feel) -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="active">
+            <i class='bx bxs-home-alt-2'></i>
+            <span>Home</span>
+        </a>
+        <a href="courses.html">
+            <i class='bx bxs-graduation'></i>
+            <span>Courses</span>
+        </a>
+        <a href="tools.html">
+            <i class='bx bxs-calculator'></i>
+            <span>Tools</span>
+        </a>
+        <a href="VIPmembers.html" class="vip-nav-tab">
+            <i class='bx bxs-crown'></i>
+            <span>VIP</span>
+        </a>
+        <a href="contact.html">
+            <i class='bx bxs-chat'></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- WhatsApp Floating Concierge -->
+    <div class="whatsapp-container">
+        <div id="waPopup" class="wa-popup">
+            <div class="wa-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class='bx bxl-whatsapp' style="font-size: 22px;"></i>
+                    <h4 style="margin: 0; font-size: 14px;">EdgeGrid Concierge</h4>
+                </div>
+                <i class='bx bx-x' style="font-size: 20px; cursor: pointer;" onclick="toggleWAPopup()"></i>
+            </div>
+            <div class="wa-body">
+                <div class="wa-message-received">
+                    Welcome to EdgeGrid Traders Capital. How may our floor analysts assist your trading journey today?
+                </div>
+            </div>
+            <div class="wa-footer">
+                <input type="text" id="waMessageInput" placeholder="Type a message..."
+                    onkeypress="if(event.key === 'Enter') sendWAMessage()">
+                <button onclick="sendWAMessage()" aria-label="Send WhatsApp message"><i
+                        class='bx bxs-send'></i></button>
+            </div>
+        </div>
+        <div class="whatsapp-float" onclick="toggleWAPopup()" title="Chat on WhatsApp">
+            <div class="wa-waves"></div>
+            <i class='bx bxl-whatsapp'></i>
+        </div>
+    </div>
+
+    <!-- Enrollment Bottom Sheet Modal -->
+    <div id="enrollModal" class="enroll-modal">
+        <div class="enroll-modal-content">
+            <div class="enroll-modal-header">
+                <h3>Start Your Trading Journey</h3>
+                <i class='bx bx-x' onclick="closeEnrollModal()"></i>
+            </div>
+            <div class="enroll-modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="enrolName" placeholder="e.g. Kalungwe Mwenshi">
+                </div>
+                <div class="form-group">
+                    <label>Country / City</label>
+                    <input type="text" id="enrolCountry" placeholder="e.g. Zambia, Livingstone">
+                </div>
+                <div class="form-group">
+                    <label>Trading Experience</label>
+                    <select id="enrolExperience">
+                        <option value="Complete Beginner">Complete Beginner</option>
+                        <option value="Less than 1 year">Less than 1 year</option>
+                        <option value="1-3 years">1-3 years</option>
+                        <option value="3+ years (Funded Seeker)">3+ years (Funded Seeker)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Learning Track</label>
+                    <select id="enrolFunds">
+                        <option value="Learn Now, Pay Later Program">Learn Now, Pay Later Program</option>
+                        <option value="Elite 30-Day Training ($75)">Elite 30-Day Training ($75)</option>
+                        <option value="Extra Earners ($179)">Extra Earners ($179)</option>
+                        <option value="VIP CAP Mastery ($349)">VIP CAP Mastery ($349)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="submitEnrollment()">
+                    Submit Application <i class='bx bx-paper-plane'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

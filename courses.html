@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Trading Programs & Curriculums | EdgeGrid Traders Capital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- App Shell Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="pictures/logo.png" alt="EdgeGrid Traders Capital Logo">
+            </a>
+
+            <div class="nav-market-status hide-mobile">
+                <span class="pulse-dot"></span> Live Curriculums
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="VIPmembers.html" class="nav-vip-link"><i class='bx bxs-crown'></i> VIP Access</a></li>
+            </ul>
+
+            <div class="nav-right-actions">
+                <div id="themeToggle" class="theme-toggle" title="Toggle Theme">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="cta-contact">
+                    <a href="tel:+260973493949" class="btn btn-outline" style="padding: 9px 18px; font-size: 13px;">
+                        <i class='bx bxs-phone'></i> <span class="hide-mobile">+260 973 493 949</span>
+                    </a>
+                </div>
+                <a href="VIPmembers.html" class="vip-top-btn" title="VIP Inner Circle">
+                    <i class='bx bxs-crown'></i>
+                </a>
+                <button class="mobile-menu-trigger" aria-label="Open Navigation Menu">
+                    <i class='bx bx-menu-alt-right'></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="hero-badge" style="margin-bottom: 12px;">
+                <i class='bx bx-award'></i> Institutional Accreditations
+            </div>
+            <h1>Our Trading Programs</h1>
+            <p>From foundational price action to algorithmic Smart Money Concepts and prop firm capitalization. 'Learn
+                Now, Pay Later' eligible.</p>
+
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                <a href="#free-beginner-class" onclick="openFreeBeginnerClass();" class="btn btn-primary btn-glow"
+                    style="font-size: 14px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class='bx bxs-gift'></i> Free Beginner Class (3 Modules)
+                </a>
+                <a href="#" onclick="openEnrollModal(); return false;" class="btn btn-outline btn-glass"
+                    style="font-size: 14px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class='bx bx-shield-quarter'></i> Apply for Mentorship
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programs Grid Section -->
+    <section class="courses-section" style="background: var(--bg-main);">
+        <div class="container">
+
+            <!-- Segmented Filter Pills (Mobile Friendly) -->
+            <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 40px;">
+                <button class="preset-pill active" onclick="filterPrograms('all', this)">All Programs (4)</button>
+                <button class="preset-pill" onclick="scrollToFreeCourse()"
+                    style="background: var(--primary-light); color: var(--primary-color); font-weight: 700; border: 1px solid var(--border-glow);">
+                    <i class='bx bxs-gift'></i> Free Beginner Class
+                </button>
+                <button class="preset-pill" onclick="filterPrograms('foundational', this)">Foundational</button>
+                <button class="preset-pill" onclick="filterPrograms('mentorship', this)">1-on-1 Mentorship</button>
+                <button class="preset-pill" onclick="filterPrograms('institutional', this)">VIP Institutional</button>
+            </div>
+
+            <div class="course-grid">
+                <!-- Course 1: Elite Program -->
+                <div class="card" data-category="foundational">
+                    <div class="card-badge-top">Foundational</div>
+                    <div class="card-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h3>Elite Program</h3>
+                    <p>The ultimate foundational syllabus covering market mechanics, candlestick anatomy, risk
+                        mathematics, and disciplined trade execution.</p>
+                    <div class="course-price">$75 · 30-Day Intensive</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 16 Modules</span>
+                        <span><i class='bx bxs-star' style="color: #F59E0B;"></i> 4.8 / 5.0</span>
+                    </div>
+                    <ul
+                        style="font-size: 13px; color: var(--text-light); margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px;">
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Complete Market Foundations
+                        </li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Core Risk Management
+                            Principles</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Community Floor Access in
+                            Livingstone</li>
+                    </ul>
+                    <a href="#" onclick="openEnrollModal('Elite Program ($75)'); return false;" class="btn btn-outline"
+                        style="width: 100%;">
+                        Enroll in Elite
+                    </a>
+                </div>
+
+                <!-- Course 2: 1-on-1 Mentorship -->
+                <div class="card" data-category="mentorship">
+                    <div class="card-badge-top" style="background: var(--primary-light); color: var(--primary-color);">
+                        Personalized</div>
+                    <div class="card-icon"><i class='bx bx-line-chart'></i></div>
+                    <h3>1-on-1 Mentorship</h3>
+                    <p>Designed for busy executives and high-net-worth individuals wanting tailored scheduling, personal
+                        trade audits, and daily execution signals.</p>
+                    <div class="course-price">$179 · Private Mentorship</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 12 Custom Modules</span>
+                        <span><i class='bx bxs-star' style="color: #F59E0B;"></i> 4.9 / 5.0</span>
+                    </div>
+                    <ul
+                        style="font-size: 13px; color: var(--text-light); margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px;">
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Direct WhatsApp Access to
+                            Head Mentor</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Weekly Live Portfolio
+                            Audits</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Premium High-Probability
+                            Trade Signals</li>
+                    </ul>
+                    <a href="#" onclick="openEnrollModal('1-on-1 Mentorship ($179)'); return false;"
+                        class="btn btn-outline" style="width: 100%;">
+                        Enroll in Mentorship
+                    </a>
+                </div>
+
+                <!-- Course 3: Advanced TFL -->
+                <div class="card" data-category="institutional">
+                    <div class="card-badge-top">Advanced Algo</div>
+                    <div class="card-icon"><i class='bx bx-rocket'></i></div>
+                    <h3>Advanced TFL Terminal</h3>
+                    <p>Master institutional algorithmic order flow, Interbank Price Delivery Algorithm (IPDA), and
+                        high-probability liquidity sweeps.</p>
+                    <div class="course-price">$349 · 6 Weeks Advanced</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 12 Modules</span>
+                        <span><i class='bx bxs-star' style="color: #00BA66;"></i> 4.9 / 5.0</span>
+                    </div>
+                    <ul
+                        style="font-size: 13px; color: var(--text-light); margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px;">
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Smart Money Concepts (SMC)
+                            Masterclass</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Fair Value Gaps & Order
+                            Block Precision</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Prop Firm Challenge
+                            Preparation</li>
+                    </ul>
+                    <a href="#" onclick="openEnrollModal('Advanced TFL ($349)'); return false;" class="btn btn-outline"
+                        style="width: 100%;">
+                        Enroll in Advanced TFL
+                    </a>
+                </div>
+
+                <!-- Course 4: VIP CAP Mastery -->
+                <div class="card featured" data-category="institutional">
+                    <div class="card-badge-top" style="background: var(--primary-color); color: #fff;">VIP Inner Circle
+                    </div>
+                    <div class="card-icon"><i class='bx bxs-crown'></i></div>
+                    <h3>CAP Mastery Portal</h3>
+                    <p>Our flagship institutional inner circle. Complete access to institutional blueprints, 7
+                        interactive modules, proprietary models, and community vault.</p>
+                    <div class="course-price">Pro Access Pass</div>
+                    <div class="card-meta">
+                        <span><i class='bx bx-book-open'></i> 7 Master Modules</span>
+                        <span><i class='bx bxs-star' style="color: #00BA66;"></i> 5.0 / 5.0</span>
+                    </div>
+                    <ul
+                        style="font-size: 13px; color: var(--text-light); margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px;">
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Full Access to
+                            VIPmembers.html Knowledge Portal</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Institutional Grade Diagram
+                            Blueprints</li>
+                        <li><i class='bx bx-check' style="color: var(--primary-color);"></i> Daily Live Trading Floor
+                            Sessions</li>
+                    </ul>
+                    <a href="VIPmembers.html" class="btn btn-primary btn-glow" style="width: 100%;">
+                        Access VIP Portal <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FREE BEGINNER CLASS: PRO COLLAPSIBLE DROPDOWN MASTERCLASS (3 MODULES)
+         Hidden by Default · Unfolds on Click · Easy to Understand · Sales Hook
+         ========================================================================== -->
+    <section id="free-beginner-class" class="free-class-section">
+        <div class="container">
+
+            <!-- Pro Masterclass Dropdown Card Trigger -->
+            <div class="free-class-card-trigger" id="freeClassTrigger" onclick="toggleFreeBeginnerClass()">
+                <div class="free-class-trigger-left">
+                    <div class="free-class-trigger-icon">
+                        <i class='bx bxs-gift'></i>
+                    </div>
+                    <div class="free-class-trigger-content">
+                        <div class="hero-badge"
+                            style="margin-bottom: 6px; display: inline-flex; background: var(--primary-light); color: var(--primary-color);">
+                            <i class='bx bx-check-circle'></i> 100% Free · No Sign-Up Needed · Open Access
+                        </div>
+                        <h3>
+                            <span>Free Beginner Class: Introduction to Forex</span>
+                            <span
+                                style="font-size: 11px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 3px 8px; border-radius: var(--radius-pill); vertical-align: middle;">3
+                                SHORT MODULES</span>
+                        </h3>
+                        <p>
+                            Learn the foundations of Forex in plain English with zero confusing jargon. Discover what
+                            Forex is, how traders profit, how to read candlestick charts, and the secret risk formula
+                            our Livingstone floor mentors use.
+                        </p>
+                    </div>
+                </div>
+                <div class="free-class-trigger-btn">
+                    <i class='bx bx-book-open'></i>
+                    <span id="triggerBtnText">Open Free Class</span>
+                    <i class='bx bx-chevron-down' id="triggerChevron"></i>
+                </div>
+            </div>
+
+            <!-- Expandable Masterclass Dropdown Body -->
+            <div class="free-class-dropdown" id="freeClassDropdown">
+
+                <!-- Segmented Module Switcher (Mobile Friendly & Smooth) -->
+                <div class="free-class-tabs" style="margin-top: 10px;">
+                    <button class="free-class-tab active" id="tab-mod-1" onclick="switchFreeModule(1)">
+                        <span class="tab-badge">Part 1</span>
+                        <span>1. What is Forex & Types of Traders</span>
+                    </button>
+                    <button class="free-class-tab" id="tab-mod-2" onclick="switchFreeModule(2)">
+                        <span class="tab-badge">Part 2</span>
+                        <span>2. How to Read Charts & Trends</span>
+                    </button>
+                    <button class="free-class-tab" id="tab-mod-3" onclick="switchFreeModule(3)">
+                        <span class="tab-badge">Part 3</span>
+                        <span>3. The Money & Mind Formula</span>
+                    </button>
+                </div>
+
+                <!-- MODULE 1: THE FOUNDATIONS (EASY TO FOLLOW, ZERO JARGON) -->
+                <div class="free-module-pane active" id="pane-mod-1">
+                    <div class="free-module-card">
+                        <div class="free-module-meta-bar">
+                            <div class="free-module-tag">
+                                <i class='bx bx-book-bookmark'></i> Module 1 · 10 Min Read · The Basics
+                            </div>
+                            <div style="font-size: 13px; color: var(--text-light); font-weight: 600;">
+                                Topic: Forex Simplified & Finding Your Trading Style
+                            </div>
+                        </div>
+
+                        <h3 class="free-module-title">What is Forex, How Do You Profit & Which Trader Are You?</h3>
+
+                        <p class="free-module-lead">
+                            Welcome to the world of Forex! You might have heard people talking about trading on social
+                            media, but what is it <em>really</em>? Let's throw out the complicated financial textbooks
+                            and explain everything in simple, everyday English.
+                        </p>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-refresh'></i> 1. What is Forex? (The Airport Money Exchange Analogy)
+                            </h4>
+                            <p>
+                                <strong>Forex</strong> stands for <strong>Foreign Exchange</strong>. It is simply the
+                                global marketplace where people, banks, and businesses swap one country's currency for
+                                another.
+                            </p>
+                            <p>
+                                Imagine you are traveling from Zambia to the United States. Before you board the plane,
+                                you go to the bureau and exchange <strong>Zambian Kwacha (ZMW)</strong> for <strong>US
+                                    Dollars (USD)</strong>.
+                            </p>
+                            <p>
+                                A week later, you return without spending any money. While you were away, the value of
+                                the US Dollar rose compared to the Kwacha. When you exchange your dollars back into
+                                Kwacha, you receive <strong>more Kwacha than you started with</strong>!
+                            </p>
+                            <p>
+                                <em>That is Forex trading!</em> Except today, you don't need to visit an airport bureau.
+                                You can buy and sell currencies digitally from your phone or laptop in seconds.
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-trending-up'></i> 2. How Do You Make Money? (Buying "Long" vs Selling
+                                "Short")</h4>
+                            <p>
+                                In normal business, you only make money when prices go up. In Forex, <strong>you can
+                                    make money whether the market is going up or going down</strong>!
+                            </p>
+                            <ul
+                                style="margin: 12px 0 16px 20px; color: var(--text-main); font-size: 14.5px; line-height: 1.8;">
+                                <li><strong>Going Long (Buying):</strong> If you believe the Euro will gain strength
+                                    against the US Dollar (EUR/USD), you click <em>Buy</em>. When the price climbs
+                                    higher, you close your trade and collect your profit.</li>
+                                <li><strong>Going Short (Selling):</strong> If you believe the Euro will weaken against
+                                    the US Dollar, you click <em>Sell</em>. As the price drops lower, you make profit on
+                                    the way down!</li>
+                            </ul>
+                            <p>
+                                Currencies are always traded in pairs (like <strong>EUR/USD</strong>,
+                                <strong>GBP/USD</strong>, or <strong>USD/JPY</strong>). The first currency is the one
+                                you are buying or selling; the second currency is the price you pay for it.
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-user-check'></i> 3. The 4 Types of Traders — Which One Fits Your Life?
+                            </h4>
+                            <p>
+                                Trading is not a one-size-fits-all game. Depending on your job, family, and personality,
+                                you belong to one of four main trading styles:
+                            </p>
+                            <div
+                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 18px 0;">
+                                <div
+                                    style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+                                    <h5
+                                        style="color: var(--secondary-color); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
+                                        <i class='bx bx-stopwatch' style="color: #EF4444;"></i> 1. The Scalper
+                                    </h5>
+                                    <p style="font-size: 13.5px; color: var(--text-light); margin: 0;">Holds trades for
+                                        seconds to a few minutes. Catches tiny price moves throughout the day. Requires
+                                        fast reflexes and high screen time.</p>
+                                </div>
+                                <div
+                                    style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+                                    <h5
+                                        style="color: var(--secondary-color); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
+                                        <i class='bx bx-sun' style="color: #F59E0B;"></i> 2. The Day Trader
+                                    </h5>
+                                    <p style="font-size: 13.5px; color: var(--text-light); margin: 0;">Opens and closes
+                                        trades within the same day. Never holds positions overnight while sleeping.
+                                        Focuses on the busy London or New York morning sessions.</p>
+                                </div>
+                                <div
+                                    style="background: var(--primary-light); border: 1px solid var(--border-glow); border-radius: var(--radius-md); padding: 18px;">
+                                    <h5
+                                        style="color: var(--primary-color); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
+                                        <i class='bx bx-briefcase' style="color: var(--primary-color);"></i> 3. The
+                                        Swing Trader (Most Recommended!)
+                                    </h5>
+                                    <p style="font-size: 13.5px; color: var(--text-main); margin: 0;">Holds trades for 2
+                                        to 5 days. You spend 30 minutes in the morning or evening analyzing charts, set
+                                        your trade, and let it run while you focus on your job or business.</p>
+                                </div>
+                                <div
+                                    style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px;">
+                                    <h5
+                                        style="color: var(--secondary-color); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
+                                        <i class='bx bx-calendar' style="color: var(--accent-cyan);"></i> 4. The
+                                        Position Trader
+                                    </h5>
+                                    <p style="font-size: 13.5px; color: var(--text-light); margin: 0;">Holds trades for
+                                        months or years based on macro country economics, interest rates, and central
+                                        bank policies.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-ruler'></i> 4. Pips, Lots & Leverage in Simple Words</h4>
+                            <p>
+                                Beginners often get confused by trading terminology. Here is all you need to know:
+                            </p>
+                            <ul
+                                style="margin: 10px 0 16px 20px; color: var(--text-main); font-size: 14px; line-height: 1.8;">
+                                <li><strong>What is a Pip?</strong> "Pip" stands for <em>Percentage in Point</em>. It is
+                                    just the tiny unit of measurement for price movement. If EUR/USD moves from 1.0850
+                                    to 1.0860, it moved <strong>10 pips</strong>.</li>
+                                <li><strong>What is a Lot Size?</strong> A "lot" is simply how big your trade size is.
+                                    If you choose a <em>micro lot (0.01)</em>, each pip is worth about $0.10. If you
+                                    choose a <em>mini lot (0.10)</em>, each pip is worth about $1.00. If you choose a
+                                    <em>standard lot (1.00)</em>, each pip is worth about $10.00.
+                                </li>
+                                <li><strong>What is Leverage?</strong> Think of leverage like a magnifying glass
+                                    provided by your broker. It allows you to control a larger trade with a small
+                                    deposit. Used correctly with our 1% rule, it helps you grow safely. Used carelessly
+                                    without stop-losses, it can blow an account.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Takeaways Callout -->
+                        <div class="free-takeaway-box">
+                            <h5><i class='bx bxs-bulb'></i> Module 1 Golden Takeaways</h5>
+                            <p>
+                                1. Forex is the global exchange of currencies — you can profit whether the market climbs
+                                or falls.<br>
+                                2. You don't have to stare at charts all day: Swing Trading allows you to trade
+                                successfully while working your regular day job.<br>
+                                3. Always know your lot size: control your risk before you ever think about profits.
+                            </p>
+                        </div>
+
+                        <!-- Module Bottom Navigation -->
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+                            <span style="font-size: 14px; font-weight: 700; color: var(--text-light);">Module 1
+                                Completed! Ready to learn chart reading?</span>
+                            <button class="btn btn-primary" onclick="switchFreeModule(2)"
+                                style="font-size: 14px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px;">
+                                Next: Module 2 (How to Read Charts) <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+
+                        <!-- Mentorship Hook -->
+                        <div class="cta-mentorship-box">
+                            <div class="hero-badge"
+                                style="background: rgba(22, 138, 58, 0.15); color: var(--primary-color); margin-bottom: 12px;">
+                                <i class='bx bxs-badge-check'></i> Step Up Your Trading Game
+                            </div>
+                            <h3>Want A Professional Mentor to Guide You Every Day?</h3>
+                            <p>
+                                Reading the basics is great, but having an experienced floor trader review your charts
+                                and answer your questions on WhatsApp is how you achieve real profitability. Let's get
+                                you started!
+                            </p>
+                            <div class="cta-mentorship-actions">
+                                <a href="https://wa.me/260973493949?text=Hi%20EdgeGrid%20Traders%20Capital%2C%20I%20just%20completed%20Module%201%20of%20the%20Free%20Beginner%20Class%20and%20I%20want%20to%20JOIN%20FULL%20MENTORSHIP!"
+                                    target="_blank" class="btn-whatsapp-join">
+                                    <i class='bx bxl-whatsapp' style="font-size: 22px;"></i> JOIN FULL MENTORSHIP
+                                </a>
+                                <a href="tel:+260973493949" class="btn btn-outline"
+                                    style="font-size: 15px; padding: 14px 26px;">
+                                    <i class='bx bxs-phone'></i> Call Trading Desk
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODULE 2: CHART READING & TECHNICALS (A LITTLE MORE TECHNICAL) -->
+                <div class="free-module-pane" id="pane-mod-2">
+                    <div class="free-module-card">
+                        <div class="free-module-meta-bar">
+                            <div class="free-module-tag">
+                                <i class='bx bx-line-chart'></i> Module 2 · 15 Min Read · Chart Reading
+                            </div>
+                            <div style="font-size: 13px; color: var(--text-light); font-weight: 600;">
+                                Topic: Candlesticks, Trends & Support/Resistance
+                            </div>
+                        </div>
+
+                        <h3 class="free-module-title">A Little More Technical: How to Read Charts & Spot Market Trends
+                        </h3>
+
+                        <p class="free-module-lead">
+                            Now that you know what Forex is, let's look at the charts. When you open a trading screen
+                            for the first time, all those moving bars can look intimidating. But once you know the
+                            grammar of candlesticks, reading a chart is as easy as reading a book.
+                        </p>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-candles'></i> 1. The Anatomy of a Candlestick (The Market's Storyteller)
+                            </h4>
+                            <p>
+                                Most traders use <strong>Japanese Candlestick Charts</strong> because a single
+                                candlestick shows you four critical pieces of information for any time period (1 hour, 4
+                                hours, or 1 day):
+                            </p>
+                            <ul
+                                style="margin: 12px 0 16px 20px; color: var(--text-main); font-size: 14.5px; line-height: 1.8;">
+                                <li><strong>The Green Candle (Bullish):</strong> Price went UP. The bottom of the thick
+                                    box is where the price <em>Opened</em>, and the top of the box is where it
+                                    <em>Closed</em>.
+                                </li>
+                                <li><strong>The Red Candle (Bearish):</strong> Price went DOWN. The top of the thick box
+                                    is where the price <em>Opened</em>, and the bottom is where it <em>Closed</em>.</li>
+                                <li><strong>The Wicks (The Thin Shadows):</strong> The thin lines poking out of the top
+                                    and bottom show the highest price and lowest price reached during that time before
+                                    buyers or sellers pushed it back.</li>
+                            </ul>
+                            <p>
+                                <em>Pro Tip:</em> When you see a candle with a very long wick on the bottom, it means
+                                sellers tried to push price down, but buyers stepped in with strong force and rejected
+                                that low price!
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-trending-up'></i> 2. The 3 Market Conditions: Trend is Your Friend</h4>
+                            <p>
+                                The market only ever moves in one of three ways:
+                            </p>
+                            <div
+                                style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin: 16px 0;">
+                                <p
+                                    style="margin-bottom: 10px; font-weight: 700; color: var(--primary-color); font-size: 15px;">
+                                    1. Uptrend (Bullish Market)</p>
+                                <p style="font-size: 14px; margin-bottom: 16px;">Price makes a staircase pattern of
+                                    <strong>Higher Highs (HH) and Higher Lows (HL)</strong>. In an uptrend, smart
+                                    traders only look for opportunities to BUY.
+                                </p>
+
+                                <p style="margin-bottom: 10px; font-weight: 700; color: #EF4444; font-size: 15px;">2.
+                                    Downtrend (Bearish Market)</p>
+                                <p style="font-size: 14px; margin-bottom: 16px;">Price makes a downward staircase of
+                                    <strong>Lower Lows (LL) and Lower Highs (LH)</strong>. In a downtrend, smart traders
+                                    only look for opportunities to SELL.
+                                </p>
+
+                                <p style="margin-bottom: 10px; font-weight: 700; color: #F59E0B; font-size: 15px;">3.
+                                    Consolidation (Ranging Market)</p>
+                                <p style="font-size: 14px; margin: 0;">Price bounces sideways between an invisible floor
+                                    and ceiling. Beginners should be patient and avoid trading choppy ranges until a
+                                    clear trend breaks out.</p>
+                            </div>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-building'></i> 3. Support & Resistance: Floors and Ceilings</h4>
+                            <p>
+                                Think of price like a bouncy rubber ball inside a two-story house:
+                            </p>
+                            <ul
+                                style="margin: 10px 0 16px 20px; color: var(--text-main); font-size: 14px; line-height: 1.8;">
+                                <li><strong>Support (The Floor):</strong> A price level where buyers consistently step
+                                    in and bounce price upwards.</li>
+                                <li><strong>Resistance (The Ceiling):</strong> A price level where sellers consistently
+                                    step in and push price back downwards.</li>
+                            </ul>
+                            <p>
+                                <strong>The Secret Most Beginners Miss (The Trap!):</strong> Beginners put their
+                                stop-losses right underneath the floor. What do institutional banks do? They
+                                intentionally push price slightly below the floor to trigger everyone's stop-loss, and
+                                THEN they make the real move up! At EdgeGrid, we teach you how to wait for that fakeout
+                                to happen first before you enter.
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-layer'></i> 4. Top-Down Analysis: The Secret to High-Accuracy Entries
+                            </h4>
+                            <p>
+                                Never place a trade by looking at just one timeframe. Use the <strong>Top-Down
+                                    Method</strong>:
+                            </p>
+                            <ol
+                                style="margin: 10px 0 16px 20px; color: var(--text-main); font-size: 14px; line-height: 1.8;">
+                                <li><strong>Check the 4-Hour or Daily Chart:</strong> Where is the overall market going?
+                                    Is it in an uptrend or downtrend? (This is your GPS roadmap).</li>
+                                <li><strong>Drop to the 15-Minute or 5-Minute Chart:</strong> Look for an entry in the
+                                    same direction as the big picture when price pulls back to support or an
+                                    institutional order block.</li>
+                            </ol>
+                        </div>
+
+                        <!-- Key Takeaways Callout -->
+                        <div class="free-takeaway-box">
+                            <h5><i class='bx bxs-bulb'></i> Module 2 Golden Takeaways</h5>
+                            <p>
+                                1. Green candles mean buyers won; red candles mean sellers won. Long wicks show price
+                                rejection.<br>
+                                2. Never fight the trend: buy in an uptrend, sell in a downtrend.<br>
+                                3. Watch out for fakeouts at support and resistance: wait for confirmation before
+                                jumping in.
+                            </p>
+                        </div>
+
+                        <!-- Module Bottom Navigation -->
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+                            <button class="btn btn-outline" onclick="switchFreeModule(1)"
+                                style="font-size: 14px; padding: 12px 20px;">
+                                <i class='bx bx-left-arrow-alt'></i> Back to Module 1
+                            </button>
+                            <button class="btn btn-primary" onclick="switchFreeModule(3)"
+                                style="font-size: 14px; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px;">
+                                Next: Module 3 (The Money & Mind Formula) <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+
+                        <!-- Mentorship Hook -->
+                        <div class="cta-mentorship-box">
+                            <div class="hero-badge"
+                                style="background: rgba(22, 138, 58, 0.15); color: var(--primary-color); margin-bottom: 12px;">
+                                <i class='bx bxs-analyse'></i> Live Market Execution
+                            </div>
+                            <h3>Learn to Spot High-Probability Trades Live on the Screen</h3>
+                            <p>
+                                Charts can be tricky when markets are moving fast. Our Head Mentor Timothy Kambole and
+                                Senior Analysts break down live charts every day for our students so you never have to
+                                trade alone.
+                            </p>
+                            <div class="cta-mentorship-actions">
+                                <a href="https://wa.me/260973493949?text=Hi%20EdgeGrid%20Traders%20Capital%2C%20I%20just%20completed%20Module%202%20of%20the%20Free%20Beginner%20Class%20and%20I%20want%20to%20JOIN%20FULL%20MENTORSHIP!"
+                                    target="_blank" class="btn-whatsapp-join">
+                                    <i class='bx bxl-whatsapp' style="font-size: 22px;"></i> JOIN FULL MENTORSHIP
+                                </a>
+                                <a href="tel:+260973493949" class="btn btn-outline"
+                                    style="font-size: 15px; padding: 14px 26px;">
+                                    <i class='bx bxs-phone'></i> Call Trading Desk
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODULE 3: THE MONEY & MIND FORMULA (RISK & PSYCHOLOGY) -->
+                <div class="free-module-pane" id="pane-mod-3">
+                    <div class="free-module-card">
+                        <div class="free-module-meta-bar">
+                            <div class="free-module-tag">
+                                <i class='bx bx-shield-quarter'></i> Module 3 · 15 Min Read · Risk & Mindset
+                            </div>
+                            <div style="font-size: 13px; color: var(--text-light); font-weight: 600;">
+                                Topic: The 1% Rule, Trade Psychology & Mentorship
+                            </div>
+                        </div>
+
+                        <h3 class="free-module-title">The Money & Mind Formula: How to Protect Capital & Win Long-Term
+                        </h3>
+
+                        <p class="free-module-lead">
+                            Here is a hard truth that amateur traders don't want to hear: <strong>You don't need a 90%
+                                win rate to get rich in Forex.</strong> In fact, professional traders win around 50% of
+                            their trades — yet they make steady, life-changing money. How? Because of two rules: Risk
+                            Management and Psychology.
+                        </p>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-check-shield'></i> 1. The Sacred 1% Rule (Why You Will Never Blow An
+                                Account Again)</h4>
+                            <p>
+                                The number one mistake beginners make is risking 10%, 20%, or even 50% of their account
+                                on one single trade. If the trade goes against them, panic sets in, and within days
+                                their account is completely gone.
+                            </p>
+                            <p>
+                                Professional traders follow <strong>The 1% Rule</strong>:
+                            </p>
+                            <p
+                                style="background: var(--primary-light); padding: 16px 20px; border-left: 4px solid var(--primary-color); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-weight: 600; color: var(--text-main);">
+                                "Never risk losing more than 1% to 2% of your total account balance on any single
+                                trade."
+                            </p>
+                            <p>
+                                If your account is $500, your maximum loss on a trade should be $5. If your account is
+                                $2,000, your maximum loss is $20. When you risk only 1%, you can lose 5 trades in a row
+                                and still have 95% of your money intact! You trade calmly, sleep peacefully, and never
+                                panic.
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-math'></i> 2. The Magic of 1:2 and 1:3 Risk-to-Reward (RR)</h4>
+                            <p>
+                                Let's look at simple grade-school math that will change how you think about trading
+                                forever:
+                            </p>
+                            <p>
+                                Imagine you only take trades where your target profit is <strong>3 times bigger</strong>
+                                than your risk (a <strong>1:3 Risk-to-Reward</strong> ratio). You risk $10 to make $30.
+                            </p>
+
+                            <!-- Simple Math Box -->
+                            <div
+                                style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 22px; margin: 18px 0;">
+                                <h5
+                                    style="font-size: 16px; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px;">
+                                    Let's Take 10 Trades Together:</h5>
+                                <p style="font-size: 14.5px; margin-bottom: 8px; color: #EF4444;"><i
+                                        class='bx bx-x'></i> You LOSE 6 trades: 6 x -$10 = <strong>-$60</strong></p>
+                                <p style="font-size: 14.5px; margin-bottom: 12px; color: var(--primary-color);"><i
+                                        class='bx bx-check'></i> You WIN only 4 trades: 4 x +$30 =
+                                    <strong>+$120</strong>
+                                </p>
+                                <div
+                                    style="border-top: 1px solid var(--border-color); padding-top: 12px; font-size: 16px; font-weight: 800; color: var(--primary-color);">
+                                    Total Result: +$120 minus $60 = <span
+                                        style="background: var(--primary-light); padding: 4px 10px; border-radius: var(--radius-pill);">+$60
+                                        NET PROFIT!</span>
+                                </div>
+                            </div>
+                            <p>
+                                You were <strong>wrong 60% of the time</strong>, yet you finished with a solid profit in
+                                your pocket! That is the power of trading like an institution.
+                            </p>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-brain'></i> 3. The 4 Emotional Traps That Destroy Beginners</h4>
+                            <p>
+                                The biggest enemy in trading is not the market — it's the person in the mirror. Watch
+                                out for these 4 traps:
+                            </p>
+                            <ul
+                                style="margin: 10px 0 16px 20px; color: var(--text-main); font-size: 14px; line-height: 1.8;">
+                                <li><strong>FOMO (Fear of Missing Out):</strong> Seeing a big green candle and jumping
+                                    in late out of excitement. Remember: the market will always present another
+                                    opportunity tomorrow.</li>
+                                <li><strong>Revenge Trading:</strong> Taking a loss and immediately doubling your lot
+                                    size to "make it back quickly". This is pure gambling.</li>
+                                <li><strong>Greed:</strong> Moving your profit target further and further away until the
+                                    market reverses and turns your win into a loss.</li>
+                                <li><strong>Fear:</strong> Hesitating to take a high-probability trade because your
+                                    previous trade lost.</li>
+                            </ul>
+                        </div>
+
+                        <div class="free-content-block">
+                            <h4><i class='bx bx-money'></i> 4. The Funded Prop Account Route (Why You Don't Need Huge
+                                Personal Capital)</h4>
+                            <p>
+                                A lot of people say: <em>"I want to trade, but I only have a small amount of
+                                    money."</em>
+                            </p>
+                            <p>
+                                In the old days, that was a huge barrier. Today, through <strong>Proprietary Trading
+                                    Firms</strong> (like FundedNext, Exness Pro, and GoatFunded), you can trade accounts
+                                funded with <strong>$10,000, $50,000, or $100,000</strong> after proving your risk
+                                discipline.
+                            </p>
+                            <p>
+                                You keep <strong>80% to 90% of the profits</strong> you generate, and you never risk
+                                losing your personal life savings. At EdgeGrid Traders Capital, we specifically train
+                                our students to pass these funded assessments!
+                            </p>
+                        </div>
+
+                        <!-- Key Takeaways Callout -->
+                        <div class="free-takeaway-box">
+                            <h5><i class='bx bxs-bulb'></i> Module 3 Golden Takeaways</h5>
+                            <p>
+                                1. Always risk strictly 1% per trade — mathematical discipline beats luck every single
+                                time.<br>
+                                2. Aim for at least 1:2 or 1:3 Risk-to-Reward so you can be profitable even with a
+                                modest win rate.<br>
+                                3. Control your emotions: treat trading like an executive business, not a weekend
+                                casino.
+                            </p>
+                        </div>
+
+                        <!-- GRAND GRADUATION & FULL MENTORSHIP CTA BOX -->
+                        <div class="cta-mentorship-box" style="margin-top: 36px; border-width: 3px;">
+                            <div class="hero-badge"
+                                style="background: var(--primary-color); color: #fff; margin-bottom: 16px;">
+                                <i class='bx bxs-trophy'></i> Congratulations! Masterclass Completed!
+                            </div>
+                            <h3 style="font-size: 30px;">You Have the Knowledge. Now Let's Build Real Wealth Together.
+                            </h3>
+                            <p style="font-size: 16px; max-width: 720px;">
+                                You now understand the true foundations of Forex better than 90% of people who lose
+                                money in the markets. But reading about trading is like reading about swimming — you
+                                won't learn until you dive in with an experienced coach by your side.
+                                <br><br>
+                                EdgeGrid Traders Capital is <strong>Zambia's premier institutional trading firm</strong>
+                                with a physical floor in Livingstone. Our senior mentors are ready to take you by the
+                                hand, audit your setups daily, and guide you through our signature <strong>'Learn Now,
+                                    Pay Later'</strong> funded pathway.
+                            </p>
+
+                            <div class="cta-mentorship-actions" style="margin-top: 28px;">
+                                <a href="https://wa.me/260973493949?text=Hi%20EdgeGrid%20Traders%20Capital%2C%20I%20just%20completed%20the%20Free%20Beginner%20Class%20and%20I%20am%20ready%20to%20JOIN%20FULL%20MENTORSHIP!"
+                                    target="_blank" class="btn-whatsapp-join"
+                                    style="font-size: 17px; padding: 16px 36px;">
+                                    <i class='bx bxl-whatsapp' style="font-size: 24px;"></i> JOIN FULL MENTORSHIP
+                                </a>
+                                <a href="#" onclick="openEnrollModal('Free Class Graduate'); return false;"
+                                    class="btn btn-outline" style="font-size: 15px; padding: 15px 28px;">
+                                    <i class='bx bx-edit'></i> Apply for 'Learn Now, Pay Later'
+                                </a>
+                                <a href="tel:+260973493949" class="btn btn-outline"
+                                    style="font-size: 15px; padding: 15px 28px;">
+                                    <i class='bx bxs-phone'></i> Call Livingstone Floor: +260 973 493 949
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn Now Pay Later Banner -->
+    <section style="padding: 70px 0; background: var(--bg-light); border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <div class="hero-badge" style="margin-bottom: 16px;">
+                <i class='bx bx-check-shield'></i> Master the Markets. Build Real Skill.
+            </div>
+            <h2
+                style="font-size: 32px; font-weight: 800; color: var(--secondary-color); margin-bottom: 16px; letter-spacing: -0.03em;">
+                Join hundreds accross Zambia
+            </h2>
+            <p style="color: var(--text-light); font-size: 16px; margin-bottom: 28px;">
+                Learn through a structured trading framework that combines market knowledge, practical execution, risk
+                management and disciplined decision-making.
+            </p>
+            <a href="#" onclick="openEnrollModal('Learn Now Pay Later'); return false;" class="btn btn-primary btn-glow"
+                style="padding: 16px 36px;">
+                Apply for trader consultation <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="pictures/logo.png" alt="EdgeGrid Traders Logo" style="height: 60px; margin-bottom: 18px;">
+                    <p style="font-size: 14px; line-height: 1.6; color: var(--text-light); margin-bottom: 20px;">
+                        Headquartered in Livingstone, Zambia. Dedicated to forging profitable institutional market
+                        participants through transparent education, risk algorithms, and our signature 'Learn Now, Pay
+                        Later' initiative.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Trading Courses</a></li>
+                        <li><a href="tools.html">Position Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Market Insights</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="VIPmembers.html">VIP Inner Circle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Desk</h4>
+                    <ul>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-map'></i>
+                                Livingstone, Zambia</span></li>
+                        <li><span style="color: var(--text-light); font-size: 14px;"><i class='bx bxs-phone'></i> +260
+                                973 493 949</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> EdgeGrid Traders Capital. All rights reserved. | Livingstone Floor,
+                Zambia
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Slide-Out App Drawer -->
+    <div class="drawer-overlay"></div>
+    <div class="mobile-app-drawer">
+        <div class="drawer-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="pictures/logo.png" alt="EdgeGrid Logo" style="height: 36px;">
+            </div>
+            <div class="drawer-close"><i class='bx bx-x'></i></div>
+        </div>
+        <div style="padding: 16px 20px 0 20px;">
+            <div
+                style="background: var(--bg-gray); padding: 12px 14px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--border-color);">
+                <div>
+                    <div
+                        style="font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">
+                        Trading Floor</div>
+                    <div style="font-size: 13px; font-weight: 800; color: var(--secondary-color);">Livingstone HQ • Pro
+                    </div>
+                </div>
+                <span class="nav-market-status" style="font-size: 10px; padding: 2px 8px;"><span
+                        class="pulse-dot"></span> Live</span>
+            </div>
+        </div>
+        <div class="drawer-menu-list">
+            <a href="index.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-home-alt-2'></i> <span>Home</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="#free-beginner-class" onclick="closeMobileDrawer(); scrollToFreeCourse();" class="drawer-item"
+                style="background: var(--primary-light); border: 1px solid var(--border-glow); border-radius: 12px; margin: 4px 0;">
+                <div class="drawer-item-left"><i class='bx bxs-gift' style="color: var(--primary-color);"></i> <span
+                        style="color: var(--primary-color); font-weight: 700;">Free Beginner Class</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 8px; border-radius: 9999px;">FREE
+                    (3 Modules)</span>
+            </a>
+            <a href="courses.html" class="drawer-item active">
+                <div class="drawer-item-left"><i class='bx bxs-graduation'></i> <span>Courses & Programs</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-light); color: var(--primary-color); padding: 2px 6px; border-radius: 9999px;">3
+                    Active</span>
+            </a>
+            <a href="tools.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-calculator'></i> <span>Position Calculator</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="VIPmembers.html" class="drawer-item" style="color: var(--primary-color); font-weight: 700;">
+                <div class="drawer-item-left"><i class='bx bxs-crown'></i> <span>VIP Inner Circle</span></div>
+                <span
+                    style="font-size: 10px; font-weight: 800; background: var(--primary-color); color: #fff; padding: 2px 6px; border-radius: 9999px;">PRO</span>
+            </a>
+            <a href="about.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-info-circle'></i> <span>About Us</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="blog.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-news'></i> <span>Market Blog</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="faq.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-help-circle'></i> <span>FAQ</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+            <a href="contact.html" class="drawer-item">
+                <div class="drawer-item-left"><i class='bx bxs-envelope'></i> <span>Contact Desk</span></div>
+                <i class='bx bx-chevron-right' style="color: var(--text-light); font-size: 16px;"></i>
+            </a>
+        </div>
+        <div class="drawer-footer">
+            <button onclick="openEnrollModal(); closeMobileDrawer();" class="btn btn-primary"
+                style="width: 100%; margin-bottom: 12px; font-size: 14px;">
+                <i class='bx bx-edit'></i> Enroll Today
+            </button>
+            <a href="tel:+260973493949" class="btn btn-outline" style="width: 100%; font-size: 14px; display: flex;">
+                <i class='bx bxs-phone'></i> Call Trading Desk
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation (Native App Feel) -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html">
+            <i class='bx bxs-home-alt-2'></i>
+            <span>Home</span>
+        </a>
+        <a href="courses.html" class="active">
+            <i class='bx bxs-graduation'></i>
+            <span>Courses</span>
+        </a>
+        <a href="tools.html">
+            <i class='bx bxs-calculator'></i>
+            <span>Tools</span>
+        </a>
+        <a href="VIPmembers.html" class="vip-nav-tab">
+            <i class='bx bxs-crown'></i>
+            <span>VIP</span>
+        </a>
+        <a href="contact.html">
+            <i class='bx bxs-chat'></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- WhatsApp Floating Concierge -->
+    <div class="whatsapp-container">
+        <div id="waPopup" class="wa-popup">
+            <div class="wa-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class='bx bxl-whatsapp' style="font-size: 22px;"></i>
+                    <h4 style="margin: 0; font-size: 14px;">EdgeGrid Concierge</h4>
+                </div>
+                <i class='bx bx-x' style="font-size: 20px; cursor: pointer;" onclick="toggleWAPopup()"></i>
+            </div>
+            <div class="wa-body">
+                <div class="wa-message-received">
+                    Welcome to EdgeGrid Traders Capital. How may our floor analysts assist your course selection today?
+                </div>
+            </div>
+            <div class="wa-footer">
+                <input type="text" id="waMessageInput" placeholder="Type a message..."
+                    onkeypress="if(event.key === 'Enter') sendWAMessage()">
+                <button onclick="sendWAMessage()" aria-label="Send WhatsApp message"><i
+                        class='bx bxs-send'></i></button>
+            </div>
+        </div>
+        <div class="whatsapp-float" onclick="toggleWAPopup()" title="Chat on WhatsApp">
+            <div class="wa-waves"></div>
+            <i class='bx bxl-whatsapp'></i>
+        </div>
+    </div>
+
+    <!-- Enrollment Bottom Sheet Modal -->
+    <div id="enrollModal" class="enroll-modal">
+        <div class="enroll-modal-content">
+            <div class="enroll-modal-header">
+                <h3>Start Your Trading Journey</h3>
+                <i class='bx bx-x' onclick="closeEnrollModal()"></i>
+            </div>
+            <div class="enroll-modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="enrolName" placeholder="e.g. Kalungwe Mwenshi">
+                </div>
+                <div class="form-group">
+                    <label>Country / City</label>
+                    <input type="text" id="enrolCountry" placeholder="e.g. Zambia, Livingstone">
+                </div>
+                <div class="form-group">
+                    <label>Trading Experience</label>
+                    <select id="enrolExperience">
+                        <option value="Complete Beginner">Complete Beginner</option>
+                        <option value="Less than 1 year">Less than 1 year</option>
+                        <option value="1-3 years">1-3 years</option>
+                        <option value="3+ years (Funded Seeker)">3+ years (Funded Seeker)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Learning Track</label>
+                    <select id="enrolFunds">
+                        <option value="Learn Now, Pay Later Program">Learn Now, Pay Later Program</option>
+                        <option value="Elite 30-Day Training ($75)">Elite 30-Day Training ($75)</option>
+                        <option value="1-on-1 Mentorship ($179)">1-on-1 Mentorship ($179)</option>
+                        <option value="Advanced TFL ($349)">Advanced TFL ($349)</option>
+                        <option value="VIP CAP Mastery">VIP CAP Mastery</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="submitEnrollment()">
+                    Submit Application <i class='bx bx-paper-plane'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function filterPrograms(category, btn) {
+            document.querySelectorAll('.preset-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.course-grid .card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleFreeBeginnerClass() {
+            const trigger = document.getElementById('freeClassTrigger');
+            const dropdown = document.getElementById('freeClassDropdown');
+            const text = document.getElementById('triggerBtnText');
+            if (!dropdown) return;
+            const isOpen = dropdown.classList.toggle('is-open');
+            if (trigger) trigger.classList.toggle('is-open', isOpen);
+            if (text) text.textContent = isOpen ? 'Close Class' : 'Open Free Class';
+        }
+
+        function openFreeBeginnerClass() {
+            const trigger = document.getElementById('freeClassTrigger');
+            const dropdown = document.getElementById('freeClassDropdown');
+            const text = document.getElementById('triggerBtnText');
+            if (dropdown && !dropdown.classList.contains('is-open')) {
+                dropdown.classList.add('is-open');
+                if (trigger) trigger.classList.add('is-open');
+                if (text) text.textContent = 'Close Class';
+            }
+        }
+
+        function switchFreeModule(modNum) {
+            // Ensure dropdown is open
+            openFreeBeginnerClass();
+
+            // Update tabs
+            document.querySelectorAll('.free-class-tab').forEach((tab, index) => {
+                if (index === modNum - 1) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Update panes
+            document.querySelectorAll('.free-module-pane').forEach((pane, index) => {
+                if (index === modNum - 1) {
+                    pane.classList.add('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+
+            // Smooth scroll to top of masterclass section
+            const target = document.getElementById('free-beginner-class');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function scrollToFreeCourse() {
+            openFreeBeginnerClass();
+            const target = document.getElementById('free-beginner-class');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Auto-open if navigating directly with hash
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '#free-beginner-class') {
+                openFreeBeginnerClass();
+            }
+        });
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash === '#free-beginner-class') {
+                openFreeBeginnerClass();
+            }
+        });
+    </script>
+</body>
+
+</html>
