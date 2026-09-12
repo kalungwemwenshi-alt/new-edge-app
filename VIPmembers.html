@@ -39,6 +39,18 @@
             box-sizing: border-box;
         }
 
+        /* Global: prevent anything from busting the viewport on mobile */
+        html {
+            overflow-x: hidden;
+        }
+
+        /* Illustration inner wrappers containing SVGs — always scrollable */
+        .illustration-container > div {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            max-width: 100%;
+        }
+
         body {
             background-color: var(--vip-dark);
             color: var(--vip-text);
@@ -130,6 +142,8 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            min-width: 0;
+            overflow-x: hidden;
         }
 
         .vip-header {
@@ -643,14 +657,16 @@
             }
 
             .vip-content-wrapper {
-                padding: 20px 15px;
-                /* Prevent any child from causing horizontal overflow */
+                padding: 20px 12px;
+                /* Hard stop: nothing may escape the viewport */
                 overflow-x: hidden;
-                width: 100%;
+                max-width: 100vw;
+                box-sizing: border-box;
             }
 
             .module-hero {
-                padding: 25px 20px;
+                padding: 25px 16px;
+                border-radius: 20px;
             }
 
             .module-hero h1 {
@@ -659,9 +675,22 @@
                 word-break: break-word;
             }
 
+            .module-hero p {
+                font-size: 15px;
+            }
+
             .content-section {
-                padding: 20px 15px;
+                padding: 20px 14px;
                 overflow-x: hidden;
+                border-radius: 20px;
+                box-sizing: border-box;
+            }
+
+            /* Make all inline-styled dark boxes responsive */
+            .content-section > div[style],
+            .content-section > div[style] > div {
+                max-width: 100% !important;
+                box-sizing: border-box !important;
             }
 
             .grid-2 {
@@ -681,20 +710,82 @@
                 white-space: nowrap;
             }
 
-            /* Prevent illustrations overflowing */
+            /* Tables: scrollable containers, compact cells */
+            .sd-table-container {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-radius: 12px;
+                box-sizing: border-box;
+            }
+
+            .sd-table {
+                min-width: 480px; /* allow horizontal scroll but still readable */
+            }
+
+            .sd-table th,
+            .sd-table td {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            /* Illustrations: allow horizontal scroll if svg/div is wider */
             .illustration-container {
                 overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 12px;
+                border-radius: 16px;
             }
 
-            .illustration-container>div {
-                min-width: 0;
+            .illustration-container > div,
+            .illustration-container > svg {
+                max-width: 100%;
             }
 
+            /* Step cards */
+            .sd-step-card {
+                padding: 16px;
+            }
+
+            /* Tool cards */
+            .tool-card {
+                padding: 20px 14px;
+            }
+
+            /* YouTube player section */
+            .yt-player-section {
+                padding: 20px 14px;
+                border-radius: 20px;
+            }
+
+            /* Key takeaways */
+            .key-takeaways {
+                padding: 16px 14px;
+            }
+
+            /* All text: prevent overflow */
             .key-takeaways ul li,
             .content-section p,
-            .content-section li {
+            .content-section li,
+            .content-section h3,
+            .content-section h4,
+            .content-section span,
+            .example-box p,
+            .example-box li {
                 word-break: break-word;
                 overflow-wrap: break-word;
+            }
+
+            /* Nav buttons: stack on very small screens */
+            .content-nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
 
